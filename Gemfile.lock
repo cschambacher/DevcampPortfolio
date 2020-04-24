@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/corina-s/coco_view_tool.git
+  revision: 86ea3aef8241aadf89ca4df2c4d8ae1378fa63b2
+  specs:
+    coco_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -201,6 +207,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.0.0)
   byebug
+  coco_view_tool!
   coffee-rails (~> 4.2)
   devise (~> 4.7, >= 4.7.1)
   friendly_id (~> 5.1.0)

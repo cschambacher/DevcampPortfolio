@@ -21,4 +21,8 @@ module ApplicationHelper
         end
     end
 
+    def copyright_generator
+        CocoViewTool::Renderer.copyright "Coco", "All rights reserved"
+    end
+
 end
