@@ -60,3 +60,5 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 
 gem 'coco_view_tool', git: 'https://github.com/corina-s/coco_view_tool.git'
+
+gem 'petergate', '~> 2.0', '>= 2.0.1'
