@@ -1,7 +1,8 @@
 <div class="col-md-8 blog-main">
   <h3 class="pb-3 mb-4 font-italic border-bottom">
-    From the Firehose
+    My Blog
   </h3>
+  <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
   <%= render @blogs %>
   
 
@@ -12,26 +13,5 @@
     <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
   </nav>
 
-</div><!-- /.blog-main -->
-<p id="notice"><%= notice %></p>
+</div>
 
-<h1>Blog posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>My Title</th>
-      <th>Date</th>
-      <th>Body</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin)%>
