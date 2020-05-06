@@ -1,8 +1,5 @@
 <div class="col-md-8 blog-main">
-  <h3 class="pb-3 mb-4 font-italic border-bottom">
-    My Blog
-  </h3>
-  <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+
   <%= render @blogs %>
   
 
