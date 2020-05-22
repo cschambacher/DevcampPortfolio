@@ -1,6 +1,7 @@
 class Portfolio < ApplicationRecord
     has_many :technologies
     accepts_nested_attributes_for :technologies,
+                                allows_destroy: true,
                                 reject_if: lambda {|attrs| attrs['name'].blank?}
 
 
