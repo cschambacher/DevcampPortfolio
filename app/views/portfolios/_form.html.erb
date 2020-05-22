@@ -30,7 +30,7 @@
       <h2>Technologies Used:</h2>
       <div>
         <%= form.fields_for :technologies do |technology_form| %>
-          <%= render 'technology-fields', f: technology_form %>
+          <%= render 'technology_fields', f: technology_form %>
         <% end %>
         <div>
           <%= link_to_add_association 'Add Technology', form, :technologies  %>
