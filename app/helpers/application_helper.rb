@@ -66,7 +66,11 @@ module ApplicationHelper
     def alerts
         alert = (flash[:alert] || flash[:error] || flash[:notice])
         if alert
-            js add_gritter(alert, title: "Coco!", sticky: false)
+            alert_generator(alert)
         end
+    end
+
+    def alert_generator msg
+        js add_gritter(msg, title: "Coco!", sticky: false)
     end
 end
