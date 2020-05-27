@@ -40,7 +40,7 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     # set le topic id manually because of bug: need to find why topic id is not set
-    @blog.topic_id = 3
+    #@blog.topic_id = 3
   
     respond_to do |format|
       if @blog.save
