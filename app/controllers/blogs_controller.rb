@@ -6,9 +6,9 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     if logged_in?(:site_admin)
-      @blogs = Blog.page(params[:page]).per(5)
+      @blogs = Blog.recent.page(params[:page]).per(5)
     else
-      @blogs = Blog.published.page(params[:page]).per(5)
+      @blogs = Blog.published.recent.page(params[:page]).per(5)
     end
     @page_title = "My Portfolio Blog"
   end
@@ -35,7 +35,9 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
-
+    # set le topic id manually because of bug: need to find why topic id is not set
+    @blog.topic_id = 3
+  
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
