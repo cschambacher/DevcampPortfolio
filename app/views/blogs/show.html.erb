@@ -1,6 +1,14 @@
 <div class="col-md-8 blog-main">
   <h2><%= @blog.title %></h2>
 
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <%= link_to "Home", root_path, class: 'breadcrumb-item' %>
+      <%= link_to @blog.topic.title, topic_path(@blog.topic), class: 'breadcrumb-item' %>
+      <li class="breadcrumb-item active" aria-current="page"><%= @blog.title %></li>
+    </ol>
+  </nav>
+
   <p><%= @blog.topic.title %>
   </p>
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> 
