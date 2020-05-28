@@ -3,6 +3,7 @@
         <h3 class="pb-3 mb-4 font-italic border-bottom">
             My Blog
         </h3>
-        <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+        <span><%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %></span>
+        <span><%= link_to 'Topics', topics_path %></span>
     </div>
 </div>
