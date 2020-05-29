@@ -1,7 +1,9 @@
 <div class="col-md-8 blog-main">
   <h2><%= @blog.title %></h2>
 
-  
+        <span class="float-right">
+        <%= render partial: 'blogs/admin_actions', locals: {blog: @blog} %>
+      </span>
 
   <nav aria-label="breadcrumb">
  
@@ -13,10 +15,7 @@
 
     </span>
   </nav>
-  <span class="float-right">
-    <%=link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin)%>
-    <%=link_to fa_icon('trash'), @blog, method: :delete, data: { confirm: 'Are you sure you want to delete this?'} if logged_in?(:site_admin)%>
-  </span>
+
 
 
   <p><%= @blog.topic.title %>
