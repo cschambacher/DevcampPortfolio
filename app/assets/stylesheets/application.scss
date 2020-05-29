@@ -113,10 +113,7 @@ body {
 /*
  * Custom styles
  */
- .card{
-   color: black;
-   text-align: left;
- }
+
  .auth-links a{
    color: black;
  }
@@ -168,5 +165,20 @@ body {
   padding: 30px;
 
 }
+.app-card-container {
+  color: black;
+  text-align: left;
+}
 
+.app-card-container > .card {
+  padding: 40px;
+}
+
+.profile-img {
+  border: 2px solid grey;
+}
+
+.app-card-container a {
+  // color: blue;
+}
  
