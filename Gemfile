@@ -72,6 +72,6 @@ gem 'cocoon', '~> 1.2', '>= 1.2.14'
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 7.0'
 gem 'redis', '~> 4.1', '>= 4.1.4'
-gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'redcarpet', '~> 3.5'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 ruby "2.6.5"
